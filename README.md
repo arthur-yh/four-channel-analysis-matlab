@@ -1,4 +1,4 @@
-# four-channel-analysis-matlab
+# Four-channel-analysis-matlab
 This matlab code analyzes four different channels (1)AWGN (2)Rayleigh (3)Rician (4)Natagami BER under the different SNR by QPSK modulation.
 After run this code, dynamic constellation diagram variation under different SNR will show in your screen. Well, I paste some result below.
 <div align="center">
