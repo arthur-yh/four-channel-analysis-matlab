@@ -12,7 +12,10 @@ After run this code, dynamic constellation diagram variation under different SNR
 <div align="center">
 <img src="https://github.com/arthur-yh/four-channel-analysis-matlab/blob/master/picture/large.jpg" height=80% width=80% >
 </div>
-<div align = "center">Fig3. four channel on large SNR</div>
+<div align = "center">Fig3. four channel on large SNR</div>  
+  
+**Notes that: diagram in top left corner is AWGN channel, top right corner is Natagami channel, left bottom corner is Rician channel, right bottom corner is Rayleigh channel.**  
+
 
 
 The result is shown below:
@@ -29,4 +32,9 @@ As shown in Fig1-3, as the increasing of SNR the points in diagram become more c
    Notes that: the distance between the point in diagram to the origin points is the power of the signal.
 3. For Rician channel, compared to Rayleigh channel, it contains multi-channels and the direct channel. So the spin angle exists and the average signals power is larger than Rayleigh, so it will be away from the origin points. 
 4. For Natagami channel, it is the combination of Rayleigh channel and Rician, or to say, it is the updated version of Rician channel, because it contain more channels than Rician. so the results is the diagram become well-proportioned from the origin to the infinty.  
-
+### Fig4 analysis  
+***Conclusion***
+**1. As the increasing of SNR, the BER of these four channel becomes lower.**  
+Analyze: As the increasing of SNR, the noise in those four channel becomes lower, so the BER have better performance.
+**2. If in the same SNR, the BER performance is AWGN > Rician > Natagami > Rayleigh.**  
+Analyze: AWGN channel have the best performance because it only have one direct channel，signal will not suffer frequency selective fading (FSF) since no multipath time delay existed. Rayleigh channel have the worst performance because it does not have direct channel, so the signals suffer strong FSF which will bring large fading to signal itself, so the worst performance. Rician channel is better than than Natagami, because Natagami channel have more channel than Rician results in more severe time delay. So the FSF in Natagami is more severe than Rician, so the worse performance than Rician.
