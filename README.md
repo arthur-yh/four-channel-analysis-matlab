@@ -42,9 +42,14 @@ Analyze: AWGN channel have the best performance because it only have one direct 
   
   
 ## Question towards the results and the code (to be updated)  
-1. Why the SNR in Fig4 could so low like -25dB and the BER is not too bad?
-Answer: This code simulates the Large-scale fading and the Small-scale fading, so the received signal will be extreme low like -160dB than transmitted signals. Well the Large-scale fading code is in the [AWGN-Rayleigh-rician-Natagami--channel_analysis.m](https://github.com/arthur-yh/four-channel-analysis-matlab/blob/master/AWGN-Rayleigh-rician-Natagami--channel_analysis.m) line 135-146. In order to analyze the BER towards the transmitted signals, I provide some power gain in line 193-196 shown below:
-```yrician = yrician .* 10^(+ydb/10);
+1. Why the SNR in Fig4 could so low like -25dB and the BER is not too bad?  
+
+Answer: This code simulates the Large-scale fading and the Small-scale fading, so the received signal will be extreme low like -160dB than transmitted signals. Well the Large-scale fading code is in the [AWGN-Rayleigh-rician-Natagami--channel_analysis.m](https://github.com/arthur-yh/four-channel-analysis-matlab/blob/master/AWGN-Rayleigh-rician-Natagami--channel_analysis.m) line 135-146. In order to analyze the BER towards the transmitted signals, I provide some power gain in line 193-196 shown below:  
+
+```
+ yrician = yrician .* 10^(+ydb/10);
  yraylei = yraylei .* 10^(+ydb/10);
  ynakagami = ynakagami .* 10^(+ydb/10);
- yawgn = yawgn .* 10^(+ydb/10); ```
+ yawgn = yawgn .* 10^(+ydb/10);
+```
+So after power gain in the receive end, the signal power larger than before, so I have to set the SNR from -25(dB) to 5(dB) to see the dynamic changes in constellation diagram.
