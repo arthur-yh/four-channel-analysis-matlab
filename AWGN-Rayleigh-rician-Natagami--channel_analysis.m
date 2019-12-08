@@ -1,6 +1,6 @@
 %%
 % copyright   yh 
-% wechat: yhll0014
+% e-mail: 695750482@qq.com
 % If you have any question, you could contact me by wechat.
 
 % 现代通信技术project1仿真    2018年10月30号
